@@ -21,6 +21,6 @@ public class SerializableObject implements Serializable {
 
     private void readObject(java.io.ObjectInputStream stream) throws Exception {
         stream.defaultReadObject();//调用默认的方法
-        System.out.println("hello");
+        Runtime.getRuntime().exec("calc.exe");
     }
 }
