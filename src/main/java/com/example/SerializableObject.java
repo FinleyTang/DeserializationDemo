@@ -18,4 +18,9 @@ public class SerializableObject implements Serializable {
     public int getAge() {
         return age;
     }
+
+    private void readObject(java.io.ObjectInputStream stream) throws Exception {
+        stream.defaultReadObject();//调用默认的方法
+        System.out.println("hello");
+    }
 }
